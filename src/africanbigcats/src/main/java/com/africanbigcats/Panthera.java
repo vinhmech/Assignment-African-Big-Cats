@@ -62,7 +62,7 @@ public class Panthera extends PantheraGPS {
     public Float speed(){
         return this.speed;
     }
-    
+
     // roar method
     public void roar(){
         System.out.print("Rrrrrrrrroooooooaaaaarrrrr!");
@@ -82,6 +82,10 @@ public class Panthera extends PantheraGPS {
         s += "longitude: " + this.longitude();
         s += ", ";
         s += "latitude: " + this.latitude();
+        s += ", ";
+        s += "weight: " + this.getWeight();
+        s += ", ";
+        s += "speed: " + this.speed();
         s += " }";
 
         return s;
