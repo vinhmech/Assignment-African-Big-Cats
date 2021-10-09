@@ -1,11 +1,17 @@
+/**
+ * Copyright Notice
+ * Filename: App.java
+ */
 package com.africanbigcats;
 
 import java.util.*;
 
 /**
- * Hello world!
- *
+ * Create African Big Cats Tracking App
+ * @author Vinh Nguyen - SJCC_CIS059
+ * @version 1.0 - 10/09/2021
  */
+
 public class App 
 {
     public static void main( String[] args )
