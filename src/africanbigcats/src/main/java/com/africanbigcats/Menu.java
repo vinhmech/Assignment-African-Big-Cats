@@ -82,6 +82,14 @@ public class Menu {
                 executeCreate(catList);
                 break;
 
+            case 'd':
+                executeDelete(catList);
+                break;
+
+            case 'f':
+                executeFind(catList);
+                break;
+                  
             case 'l':
                 executeList(catList);
                 break;
