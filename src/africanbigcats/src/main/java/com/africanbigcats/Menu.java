@@ -196,6 +196,7 @@ public class Menu {
         if (catList.size() > 0) {
             for (Integer i = 0; i < catList.size(); i++) {
                 cat = catList.get(i);
+                System.out.print(String.format("#%03d ", i+1));
                 System.out.println(cat);
             }
         } else {
@@ -203,7 +204,6 @@ public class Menu {
         }
 
         System.out.println();
-
     }
 
     /*
