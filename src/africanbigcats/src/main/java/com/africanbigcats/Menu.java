@@ -138,6 +138,17 @@ public class Menu {
             return result;
         }
 
+        else if (catChoice == '2'){
+            result = new Lion(name);
+            System.out.println(String.format("\nSTATUS: %s has been added.", result.name()));
+            return result;
+        }
+
+        else if (catChoice == '3'){
+            result = new Jaguar(name);
+            System.out.println(String.format("\nSTATUS: %s has been added.", result.name()));
+            return result;
+        }
 
         else{
             result = new Tiger(name);
