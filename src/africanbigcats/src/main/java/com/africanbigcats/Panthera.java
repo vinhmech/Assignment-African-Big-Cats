@@ -87,10 +87,6 @@ public class Panthera extends PantheraGPS {
         s += ", ";
         s += "speed: " + this.speed();
         s += " }";
-
         return s;
-
     }
-
-
 }
