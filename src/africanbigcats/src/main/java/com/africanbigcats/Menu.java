@@ -54,12 +54,15 @@ public class Menu {
 
         String rawInput = input.nextLine();
         
-        if (rawInput.length() > 0) {
-            rawInput = rawInput.toLowerCase();
-            command = rawInput.charAt(0);
+        if (rawInput.length() > 1 || rawInput.length() == 0) {
+            return '_';
         }
 
-        return command;
+        else {
+            rawInput = rawInput.toLowerCase();
+            command = rawInput.charAt(0);
+            return command;
+        }
 
     }
 
