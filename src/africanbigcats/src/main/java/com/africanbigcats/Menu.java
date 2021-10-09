@@ -89,7 +89,7 @@ public class Menu {
             case 'f':
                 executeFind(catList);
                 break;
-                  
+
             case 'l':
                 executeList(catList);
                 break;
@@ -224,15 +224,19 @@ public class Menu {
 
     // delete a cat based on cat name
     public void executeDelete(LinkedList<Panthera> catList){
-        // get the name
-        System.out.println();
-        System.out.print("Delete cat name: ");
-        String name = input.nextLine();
-        System.out.println();
-
         int listSize = catList.size();
-        boolean wasRemoved = false;
-        if (listSize > 0){
+        if (listSize == 0){
+            System.out.println("Fail to delete, there is no cat in the list to delete");
+            System.out.println();
+        }
+        else{
+            // get the name
+            System.out.println();
+            System.out.print("Delete cat name: ");
+            String name = input.nextLine();
+            System.out.println();
+
+            boolean wasRemoved = false;
             for (int i = 0; i < listSize; i++){
                 if (catList.get(i).name().equals(name)){
                     catList.remove(i);
@@ -246,11 +250,6 @@ public class Menu {
                 System.out.println(String.format("Fail to delete, there is no cat name %s to delete", name));
                 System.out.println();
             }
-
-        }
-        else{
-            System.out.println("Fail to delete, there is no cat in the list to delete");
-            System.out.println();
         }
     }
 
