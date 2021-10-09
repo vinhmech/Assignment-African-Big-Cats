@@ -110,7 +110,6 @@ public class Menu {
 
         // close the scannner
         input.close();
-
         System.out.println();
         printLine();
         System.out.println("Thank you for using the African Big Cats App!");
