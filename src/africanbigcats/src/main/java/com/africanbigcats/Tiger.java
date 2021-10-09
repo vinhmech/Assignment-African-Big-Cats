@@ -1,7 +1,7 @@
 package com.africanbigcats;
 
 /*
- * Panthera base class that simulates GPS information
+ * Tiger is a sub class of Panthera class
  */
 public class Tiger extends Panthera {
 
@@ -30,6 +30,10 @@ public class Tiger extends Panthera {
         s += "longitude: " + longitude();
         s += ", ";
         s += "latitude: " + latitude();
+        s += ", ";
+        s += "weight: " + getWeight();
+        s += ", ";
+        s += "speed: " + speed();
         s += ", ";
         s += "fur: " + fur();
         s += " }";
