@@ -30,8 +30,32 @@ public class Panthera extends PantheraGPS {
         // initialize attributes
         this.setSpecies("panthera");
 
+        // seed the random number generators for repeatable results
+        this.weightRandom = new Random();
+        this.weightRandom.setSeed(this.seed(name + "weight"));
+        // set weight = weightRandom
+        this.weight = weightRandom.nextInt(maxWeight - minWeight + 1) + minWeight;
+
+        // seed the random number generators for repeatable results
+        this.speedRandom = new Random();
+        this.speedRandom.setSeed(this.seed(name + "speed"));
+        // set speed = speedRandom
+        this.speed = (speedRandom.nextInt((int)maxSpeed * 100 - (int)minSpeed + 1) + (int)minSpeed) / 100.00f;
     }
 
+    // make a seed, based on the name
+    private Integer seed(String s) {
+        Integer seed = 0;
+
+        for (Integer i = 0; i < s.length() ; i++) {
+            char ch = s.charAt(i);
+            seed += (int) ch;
+        }
+
+        return seed;
+    }
+
+    
     // serializes attributes into a string
     @Override // override superclass method
     public String toString() {
