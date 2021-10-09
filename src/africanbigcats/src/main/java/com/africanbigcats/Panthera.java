@@ -55,7 +55,11 @@ public class Panthera extends PantheraGPS {
         return seed;
     }
 
-    
+    // roar method
+    public void roar(){
+        System.out.print("Rrrrrrrrroooooooaaaaarrrrr!");
+    }
+
     // serializes attributes into a string
     @Override // override superclass method
     public String toString() {
