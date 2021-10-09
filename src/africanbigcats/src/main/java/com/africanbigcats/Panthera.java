@@ -56,9 +56,13 @@ public class Panthera extends PantheraGPS {
     }
 
     // getters
+    public Integer getWeight(){
+        return this.weight;
+    }
     public Float speed(){
         return this.speed;
     }
+    
     // roar method
     public void roar(){
         System.out.print("Rrrrrrrrroooooooaaaaarrrrr!");
