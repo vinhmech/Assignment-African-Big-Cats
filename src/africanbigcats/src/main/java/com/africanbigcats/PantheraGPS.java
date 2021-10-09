@@ -5,6 +5,7 @@ import java.util.Random;
 /*
  * Panthera base class that simulates GPS information
  */
+
 public class PantheraGPS {
 
     // constants
@@ -100,6 +101,4 @@ public class PantheraGPS {
     public Float latitude() {
         return latitude;
     }
-
-
 }
