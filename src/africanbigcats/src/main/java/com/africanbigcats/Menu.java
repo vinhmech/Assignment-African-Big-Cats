@@ -136,7 +136,7 @@ public class Menu {
             In this area of the code, students need to get input from the user for the type of cat 
             and create the correct type.
 
-            Currently, the code always create a Tiger.  But, support for Lions and Jaguars
+            Currently, the code always create a Tiger. But, support for Lions and Jaguars
             also needs to be added.
 
         */
