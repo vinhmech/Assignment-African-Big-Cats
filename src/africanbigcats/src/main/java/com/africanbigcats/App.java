@@ -38,6 +38,5 @@ public class App
             // move the cats to new positions in africa
             appMenu.update(catList);
         }
-
     }
 }
