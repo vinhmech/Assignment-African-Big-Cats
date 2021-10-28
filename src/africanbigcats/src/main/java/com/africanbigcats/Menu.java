@@ -95,6 +95,10 @@ public class Menu {
             case 'l':
                 executeList(catList);
                 break;
+                
+            case 'r':
+                executeRiskReport(catList);
+                break;
 
             case 'q':
                 executeQuit();
