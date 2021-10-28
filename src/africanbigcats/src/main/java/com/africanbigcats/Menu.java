@@ -282,4 +282,15 @@ public class Menu {
             System.out.println();
         }
     }
+
+
+    // find distance between two coordinates
+    public Double calculateDistance(Float lattitude1, Float longitude1, Float lattitude2, Float longitude2){
+        Double distance = Math.sqrt(Math.pow((lattitude2 - lattitude1), 2) + Math.pow((longitude2 - longitude1), 2));
+        return distance;
+    }
+
+
+
+    
 }
