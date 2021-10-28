@@ -100,6 +100,10 @@ public class Menu {
                 executeRiskReport(catList);
                 break;
 
+            case 'w':
+                executeWarningReport(catList);
+                break;
+                
             case 'q':
                 executeQuit();
                 break;
