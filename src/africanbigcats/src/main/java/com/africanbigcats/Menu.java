@@ -306,5 +306,47 @@ public class Menu {
         }
     }
 
+    // execute risk report
+    public void executeRiskReport(LinkedList<Panthera> catList){
+        int listSize = catList.size();
+        if (listSize < 2){
+            System.out.println(String.format("We have %d cat in the list, we need at least 2 cats in the tracking list to generate risk report", listSize));
+            System.out.println();
+            return;
+        }
+
+        // get the name
+        System.out.println();
+        System.out.print("Enter a name for the first big cat: ");
+        String firstCatName = input.nextLine();
+        Panthera firstCat = isCatOnTheList(firstCatName, catList);
+        if (firstCat == null){
+            System.out.println(String.format("Your first big cat %s is not on the tracking list, can not generate risk report", firstCatName));
+            return;
+        }
+
+        System.out.println();
+        System.out.print("Enter a name for the second big cat: ");
+        String secondCatName = input.nextLine();
+        Panthera secondCat = isCatOnTheList(secondCatName, catList);
+        if (secondCat == null){
+            System.out.println(String.format("Your second big cat %s is on not the tracking list, can not generate risk report", secondCatName));
+            return;
+        }
+
+        Double distanceBetweenTwoCat = calculateDistance(firstCat.latitude(), firstCat.longitude(),
+        secondCat.latitude(), secondCat.longitude());
+
+        System.out.println();
+        printLine();
+        System.out.println("African Big Cats Risk Report");
+        printLine();
+        System.out.println(firstCat);
+        System.out.println(secondCat);
+        printLine();
+        System.out.println(String.format("The distance between %s and %s is %.2f", firstCatName, secondCatName, distanceBetweenTwoCat));
+        System.out.println();
+        return;
+    }
 
 }
