@@ -290,7 +290,21 @@ public class Menu {
         return distance;
     }
 
+    // check if a specific cat name is on the list and return that cat object
+    public Panthera isCatOnTheList(String name, LinkedList<Panthera> catList){
+        int listSize = catList.size();
+        if (listSize > 0){
+            for (int i = 0; i < listSize; i++){
+                if(catList.get(i).name().equals(name)){
+                    return catList.get(i);
+                }
+            }
+            return null;
+        }
+        else {
+            return null;
+        }
+    }
 
 
-    
 }
